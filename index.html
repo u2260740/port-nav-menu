@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <title>Nav Menu</title>
+</head>
+<body data-nav="false">
+    <main>
+        <div class="images">
+            <div class="images-slide">
+                <img src="./assets/XP_Bottle.webp" draggable="false"/>
+                <img src="./assets/XP_Bottle.webp" draggable="false"/>
+                <img src="./assets/XP_Bottle.webp" draggable="false"/>
+                <img src="./assets/XP_Bottle.webp" draggable="false"/>
+                <img src="./assets/XP_Bottle.webp" draggable="false"/>
+                <img src="./assets/XP_Bottle.webp" draggable="false"/>
+                <img src="./assets/XP_Bottle.webp" draggable="false"/>
+                <img src="./assets/XP_Bottle.webp" draggable="false"/>
+                <img src="./assets/XP_Bottle.webp" draggable="false"/>
+                <img src="./assets/XP_Bottle.webp" draggable="false"/>
+                <img src="./assets/XP_Bottle.webp" draggable="false"/>
+                <img src="./assets/XP_Bottle.webp" draggable="false"/>
+                <img src="./assets/XP_Bottle.webp" draggable="false"/>
+                <img src="./assets/XP_Bottle.webp" draggable="false"/>
+                <img src="./assets/XP_Bottle.webp" draggable="false"/>
+                <img src="./assets/XP_Bottle.webp" draggable="false"/>
+            </div>
+        </div>
+    </main>
+
+    <nav>
+        <div id="nav-links">
+            <a class="nav-link" href="#Home">
+                <h2 class="nav-link-label rubik-font">Home</h2>
+                <img class="nav-link-image" src="https://images.unsplash.com/photo-1655336925018-02f50fafc6ed?q=80&w=1976&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+            </a>
+            <a class="nav-link" href="#About">
+                <h2 class="nav-link-label rubik-font">About</h2>
+                <img class="nav-link-image" src="https://images.unsplash.com/photo-1674476002026-8153a0fafc4e?q=80&w=2127&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+            </a>
+            <a class="nav-link" href="#Work">
+                <h2 class="nav-link-label rubik-font">Work</h2>
+                <img class="nav-link-image" src="https://images.unsplash.com/photo-1713037014151-b8282225abf6?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+            </a>
+            <a class="nav-link" href="#Contact">
+                <h2 class="nav-link-label rubik-font">Contact</h2>
+                <img class="nav-link-image" src="https://images.unsplash.com/photo-1512428559087-560fa5ceab42?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+            </a>
+        </div>
+
+    </nav>
+
+    <!-- Nav button -->
+    <button id="nav-toggle" type="button" onclick="toggleNav()">
+        <!-- button icons for depending on whether the nav menu is open or closed -->
+        <i class="open">
+            <svg viewBox="0 0 448 512" title="bars">
+                <path d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z" />
+              </svg>
+        </i>
+        <i class="close">
+            <svg viewBox="0 0 512 512" title="ban">
+                <path d="M256 8C119.034 8 8 119.033 8 256s111.034 248 248 248 248-111.034 248-248S392.967 8 256 8zm130.108 117.892c65.448 65.448 70 165.481 20.677 235.637L150.47 105.216c70.204-49.356 170.226-44.735 235.638 20.676zM125.892 386.108c-65.448-65.448-70-165.481-20.677-235.637L361.53 406.784c-70.203 49.356-170.226 44.736-235.638-20.676z" />
+              </svg>
+        </i>
+    </button>
+
+    <!-- Script to create duplicates of the logos via JS -->
+    <script>
+        var copy = document.querySelector(".images-slide").cloneNode(true);
+        document.querySelector(".images").appendChild(copy);
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>
