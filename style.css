@@ -1,3 +1,10 @@
+:root{
+    --pr-color: #fff;
+    --second-color: #0a0a0a;
+    --cubicbz: cubic-bezier(.90,0,.1,1);
+    --fz-bhig: 60px;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -18,97 +25,17 @@ body{
 /* Main Body */
 
 main{
-    background-image: url('https://images.unsplash.com/photo-1655336925018-02f50fafc6ed?q=80&w=1976&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-    background-position: center 0%;
-    background-size: cover;
+    background-color: #0a0a0a;
+    box-sizing: border-box;
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    margin: 0;
+    padding: 0;
     height: 100vh;
     width: 100vw;
     position: relative;
     z-index: 2;
     transition: transform 500ms cubic-bezier(.13,.53,.38,.97);
-}
-
-@keyframes slide{
-    from{
-        /* Shifts elemetes horizontally */
-        transform: translateX(0);
-    }
-    to{
-        transform: translateX(-100%);
-    }
-}
-
-.images{
-    overflow: hidden;
-    padding: 20px 0;
-    white-space: nowrap;
-    background: white;
-    position: relative;
-}
-
-/* Creates the fade on either side of the carousel */
-.images:before,
-.images:after{
-    position: absolute;
-    top: 0;
-    width: 250px;
-    height: 100%;
-    content: " ";
-    z-index: 2;
-}
-
-.images:before{
-    left: 0;
-    background: linear-gradient(to left, rgba(255,255,255,0), white);
-}
-
-.images::after{
-    right: 0;
-    background: linear-gradient(to right, rgba(255,255,255,0), white);
-}
-
-.images-slide{
-    display: inline-block;
-    animation: 15s slide infinite linear;
-}
-
-/* For all images inside the image slides */
-.images-slide img{
-    height: 40px;
-    margin: 0 40px;
-    transform: rotateZ(-25deg);
-}
-
-@keyframes shake {
-    0%{transform: rotateZ(-25deg) translateX(5px);}
-    20%{transform: rotateZ(20deg) translateX(-4px);}
-    50%{transform: rotateZ(-14deg) translateX(3.4px);}
-    80%{transform: rotateZ(8deg) translateX(-1.8px);}
-    90%{transform: rotateZ(4deg) translateX(1px);}
-    100%{transform: rotateZ(0deg);}
-}
-
-/* When the carousel is hovered over access all images and play animation */
-.images:hover > .images-slide > img{
-    animation: shake 2s forwards ease-in-out;
-}
-
-@keyframes start {
-    from{
-        transform: rotateZ(0deg);
-    }
-    to{
-        transform: rotateZ(-25deg) translateX(5px);
-    }
-}
-
-/* When the carousel is not hovered over access all images and play animation */
-.images:not(:hover) > .images-slide > img{
-    animation: start 0.4s forwards linear;
-}
-
-.images:hover .images-slide{
-    animation-play-state: paused;
 }
 
 /* Nav Menu Handling */
